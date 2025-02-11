@@ -2474,3 +2474,52 @@ button.scroll-convo {
 .scale-98 {
   transform: scale(0.98);
 }
+
+/* TEACHER TOOLS STYLING REQUIREMENTS */
+/* Add to your global styles */
+.select-portal-fixed {
+  position: relative;
+  
+}
+
+
+@layer base {
+  [data-radix-popper-content-wrapper] {
+    position: absolute !important;
+    left: 0;
+    top: 0;
+    width: var(--radix-popper-anchor-width);
+    transform-origin: var(--radix-popper-transform-origin);
+    z-index: 9999 !important;
+  }
+}
+
+@layer components {
+  .SelectContent {
+    z-index: 9999;
+    position: relative;
+    overflow: hidden;
+    background-color: #2a2a2a;
+    border-radius: 6px;
+    box-shadow: 0px 10px 38px -10px rgba(22, 23, 24, 0.35), 0px 10px 20px -15px rgba(22, 23, 24, 0.2);
+  }
+
+  .SelectViewport {
+    padding: 5px;
+  }
+}
+
+/* Portal root styles */
+#radix-:r0  {
+  display: contents !important;
+}
+
+div[data-radix-popper-content-wrapper] {
+  position: absolute !important;
+  z-index: 9999 !important;
+}
+
+.radix-popper-content-wrapper {
+  position: absolute !important;
+  z-index: 9999 !important;
+}

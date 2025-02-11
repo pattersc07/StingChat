@@ -13,6 +13,7 @@ import {
 import { useConversationsInfiniteQuery } from '~/data-provider';
 import { Conversations } from '~/components/Conversations';
 import BookmarkNav from './Bookmarks/BookmarkNav';
+import TeacherTools from './TeacherTools/TeacherTools';
 import AccountSettings from './AccountSettings';
 import { useSearchContext } from '~/Providers';
 import { Spinner } from '~/components/svg';
@@ -175,6 +176,10 @@ const Nav = ({
                               />
                             </>
                           )}
+                          <TeacherTools
+                            isSmallScreen={isSmallScreen}
+                            toggleNav={itemToggleNav}
+                          />
                         </>
                       }
                     />
